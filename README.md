@@ -21,7 +21,7 @@ A custom cursor of two elements (dot and shadow) that changes its appearance whe
 ## Customization
 
 - Open a `dotandshadowcursor.js`.
-- Set cursor color.
+- Set cursor color (name, hex, rgb).
 ``` js
 color: 'salmon',
 ```
