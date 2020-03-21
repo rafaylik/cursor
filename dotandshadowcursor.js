@@ -92,7 +92,7 @@
 		},
 		move: function(e) {
 			cursor.set(cursor.dot, e.clientX, e.clientY);
-			if (e.clientX !== cursor.lastX && e.clientY !== cursor.lastY) {
+			if (e.clientX !== cursor.lastX || e.clientY !== cursor.lastY) {
 				cursor.class_ending.add('move');
 			}
 			if (cursor.catch_stop) clearTimeout(cursor.catch_stop);
