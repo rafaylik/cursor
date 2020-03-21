@@ -1,0 +1,119 @@
+html,
+body {
+	height: 100%;
+}
+
+/* hide default cursor */
+.cursor-hide {
+	cursor: none !important;
+}
+
+/* dot cursor and shadow */
+.cursor-dot,
+.cursor-shadow {
+	position: fixed;
+	z-index: 1000;
+	pointer-events: none;
+	left: -100px;
+	top: -100px;
+	border-radius: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: width .5s, height .5s, opacity .5s, background .5s;
+	transition: width .5s, height .5s, opacity .5s, background .5s;
+}
+.cursor-dot {
+	width: 5px;
+	height: 5px;
+}
+.cursor-shadow {
+	width: 100px;
+	height: 100px;
+	opacity: .4;
+}
+
+/* cursor in motion */
+.cursor-shadow-move {
+	width: 150px !important;
+	height: 150px !important;
+	opacity: .2 !important;
+}
+
+/* hover over text */
+.cursor-dot-hover-text,
+.cursor-dot-hover-text.cursor-dot-click {
+	width: 1px;
+	height: 1px;
+	-webkit-transform: none;
+	transform: none;
+	-webkit-transition: none;
+	transition: none;
+}
+.cursor-dot-hover-text::before {
+	content: "";
+	position: absolute;
+	left: -3px;
+	top: -16px;
+	width: 7px;
+	height: 30px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-color: inherit;
+}
+.cursor-dot-hover-text::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -16px;
+	width: 1px;
+	height: 32px;
+	background: inherit;
+}
+.cursor-shadow-hover-text {
+	background: transparent !important;
+	border-style: solid;
+	border-width: 1px;
+	opacity: 1;
+}
+.cursor-shadow-hover-text.cursor-shadow-move {
+	opacity: 1 !important;
+}
+.cursor-shadow-hover-text.cursor-shadow-click {
+	width: 64px;
+	height: 64px;
+	opacity: 1;
+}
+
+/* hover over image */
+.cursor-shadow-hover-image {
+	background: transparent !important;
+	border-style: solid;
+	border-width: 1px;
+	opacity: 1;
+}
+.cursor-shadow-hover-image.cursor-shadow-move {
+	opacity: 1 !important;
+}
+.cursor-shadow-hover-image.cursor-shadow-click {
+	opacity: 1;
+}
+
+/* hover over link */
+.cursor-shadow-hover-link {
+	width: 200px;
+	height: 200px;
+	opacity: .1;
+}
+
+/* mousedown event */
+.cursor-dot-click {
+	width: 5px;
+	height: 5px;
+}
+.cursor-shadow-click {
+	width: 50px;
+	height: 50px;
+	opacity: .6;
+}
