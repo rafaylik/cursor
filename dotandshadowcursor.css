@@ -19,8 +19,6 @@ body {
 	border-radius: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	-webkit-transition: width 1s, height 1s, opacity 1s, background 1s;
-	transition: width 1s, height 1s, opacity 1s, background 1s;
 }
 .cursor-dot {
 	width: 5px;
@@ -30,6 +28,8 @@ body {
 	width: 100px;
 	height: 100px;
 	opacity: .4;
+	-webkit-transition: width 1s, height 1s, opacity 1s, background 1s;
+	transition: width 1s, height 1s, opacity 1s, background 1s;
 }
 
 /* cursor in motion */
