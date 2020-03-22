@@ -33,7 +33,7 @@ from_: 1025,
 ``` js
 delay: 250,
 ```
-- Set list of elements (tag name or class) for various hover events.
+- Set list of elements (tag name, class) for various hover events.
 ``` js
 hover: {
     text: 'p, h1',
