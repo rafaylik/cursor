@@ -43,17 +43,16 @@ body {
 .cursor-dot-hover-text,
 .cursor-dot-hover-text.cursor-dot-click {
 	width: 1px;
-	height: 1px;
-	-webkit-transform: none;
-	transform: none;
-	-webkit-transition: none;
-	transition: none;
+	height: 32px;
+	border-radius: 0;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
 }
-.cursor-dot-hover-text::before {
+.cursor-dot-hover-text::after {
 	content: "";
 	position: absolute;
 	left: -3px;
-	top: -16px;
+	top: 0;
 	width: 7px;
 	height: 30px;
 	border-top-style: solid;
@@ -61,15 +60,6 @@ body {
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 	border-color: inherit;
-}
-.cursor-dot-hover-text::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: -16px;
-	width: 1px;
-	height: 32px;
-	background: inherit;
 }
 .cursor-shadow-hover-text {
 	background: transparent !important;
@@ -108,10 +98,6 @@ body {
 }
 
 /* mousedown event */
-.cursor-dot-click {
-	width: 5px;
-	height: 5px;
-}
 .cursor-shadow-click {
 	width: 50px;
 	height: 50px;
