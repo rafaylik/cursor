@@ -25,13 +25,13 @@ A custom cursor of two elements (dot and shadow) that changes its appearance whe
 ``` js
 color: 'Salmon',
 ```
-- Set shadow move delay (milliseconds).
-``` js
-delay: 250,
-```
 - Set minimum window width (pixels) for custom cursor activation.
 ``` js
 from_: 1025,
+```
+- Set shadow move delay (milliseconds).
+``` js
+delay: 250,
 ```
 - Set list of elements (tag name or class) for various hover events.
 ``` js
