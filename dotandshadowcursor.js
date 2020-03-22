@@ -11,8 +11,9 @@
 {
 
 	var cursor = {
-		color: 'salmon', // cursor color
-		from_: 1025, // minimum window width (in pixels) for custom cursor activation
+		color: 'Salmon', // cursor color (name, hex, rgb)
+		from_: 1025, // minimum window width (ipixels) for custom cursor activation
+		delay: 250, // shadow move delay (milliseconds)
 		hover: {
 			text: 'p, h1', // tag list for text cursor
 			image: 'img, video', // tag list for image cursor
@@ -105,7 +106,7 @@
 				if (!cursor.over_link) {
 					cursor.set(cursor.shadow, e.clientX, e.clientY);
 				}
-			}, 250);
+			}, cursor.delay);
 		},
 		stop: function() { cursor.class_ending.remove('move') },
 		down: function(e) {

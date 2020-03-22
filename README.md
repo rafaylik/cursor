@@ -23,9 +23,13 @@ A custom cursor of two elements (dot and shadow) that changes its appearance whe
 - Open a `dotandshadowcursor.js`.
 - Set cursor color (name, hex, rgb).
 ``` js
-color: 'salmon',
+color: 'Salmon',
 ```
-- Set minimum window width (in pixels) for custom cursor activation.
+- Set shadow move delay (milliseconds).
+``` js
+delay: 250,
+```
+- Set minimum window width (pixels) for custom cursor activation.
 ``` js
 from_: 1025,
 ```
