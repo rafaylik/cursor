@@ -13,7 +13,7 @@
 	var cursor = {
 		color: 'Salmon', // cursor color (name, hex, rgb)
 		from_: 1025, // minimum window width (ipixels) for custom cursor activation
-		delay: 250, // shadow move delay (milliseconds)
+		delay: 150, // shadow move delay (milliseconds)
 		hover: {
 			text: 'p, h1', // tag list for text cursor
 			image: 'img, video', // tag list for image cursor

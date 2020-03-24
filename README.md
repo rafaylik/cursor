@@ -31,7 +31,7 @@ from_: 1025,
 ```
 - Set shadow move delay (milliseconds).
 ``` js
-delay: 250,
+delay: 150,
 ```
 - Set list of elements (tag, class) for various hover events.
 ``` js
