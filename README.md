@@ -2,11 +2,11 @@ A custom cursor of two elements (dot and shadow) that changes its appearance whe
 
 ## Demo
 
-[Dot and Shadow Cursor demonstration](https://rafaylik.github.io/dotandshadowcursor/)
+[Dot and Shadow Cursor demonstration](https://rafaylik.github.io/cursor/)
 
 ## Installing
 
-- [Download](https://github.com/rafaylik/dotandshadowcursor/archive/master.zip) and unzip, or just `$ git clone https://github.com/rafaylik/dotandshadowcursor.git`
+- [Download](https://github.com/rafaylik/cursor/archive/master.zip) and unzip, or just `$ git clone https://github.com/rafaylik/dotandshadowcursor.git`
 - Place a `dotandshadowcursor.css` and `dotandshadowcursor.js` in the directory of your application.
 - Include `dotandshadowcursor.css` and `dotandshadowcursor.js` at the `head` section.
 ``` html
