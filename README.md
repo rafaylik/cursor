@@ -2,7 +2,7 @@ A custom cursor of two elements (dot and shadow) that changes its appearance whe
 
 ## Demo
 
-[Dot and Shadow Cursor demonstration](https://rafaylik.github.io/cursor/)
+[Cursor demonstration](https://rafaylik.github.io/cursor/)
 
 ## Installing
 
