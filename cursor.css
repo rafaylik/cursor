@@ -91,6 +91,10 @@ body {
 }
 
 /* hover over link */
+.cursor-dot-hover-link {
+	width: 10px;
+	height: 10px;
+}
 .cursor-shadow-hover-link {
 	width: 200px;
 	height: 200px;
