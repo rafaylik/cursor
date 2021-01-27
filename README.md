@@ -6,28 +6,28 @@ A custom cursor of two elements (dot and shadow) that changes its appearance whe
 
 ## Installing
 
-- [Download](https://github.com/rafaylik/cursor/archive/master.zip) and unzip, or just `$ git clone https://github.com/rafaylik/dotandshadowcursor.git`
-- Place a `dotandshadowcursor.css` and `dotandshadowcursor.js` in the directory of your application.
-- Include `dotandshadowcursor.css` and `dotandshadowcursor.js` at the `head` section.
+- [Download](https://github.com/rafaylik/cursor/archive/master.zip) and unzip, or just `$ git clone https://github.com/rafaylik/cursor.git`
+- Place a `cursor.css` and `cursor.js` in the directory of your application.
+- Include `cursor.css` and `cursor.js` at the `head` section.
 ``` html
 <head>
 
-    <link rel="stylesheet" href="dotandshadowcursor.css">
-    <script src="dotandshadowcursor.js"></script>
+    <link rel="stylesheet" href="cursor.css">
+    <script src="cursor.js"></script>
 
 </head>
 ```
 
 ## Customization
 
-- Open a `dotandshadowcursor.js`.
+- Open a `cursor.js`.
 - Set cursor color (name, hex, rgb).
 ``` js
 color: 'Salmon',
 ```
 - Set minimum window width (pixels) for custom cursor activation.
 ``` js
-from_: 1025,
+from_: 1024,
 ```
 - Set shadow move delay (milliseconds).
 ``` js
