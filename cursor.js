@@ -1,8 +1,8 @@
 /*
 
-	Dot and Shadow Cursor v1.0
+	Dot and Shadow Cursor v1.1
 	Licensed under the MIT License
-	Copyright 2020 Michael Rafaylik
+	Copyright 2021 Michael Rafaylik
 	rafaylik@icloud.com
 	https://github.com/rafaylik/dotandshadowcursor
 
@@ -12,13 +12,14 @@
 
 	var cursor = {
 		color: 'Salmon', // cursor color (name, hex, rgb)
-		from_: 1025, // minimum window width (ipixels) for custom cursor activation
+		from_: 1024, // minimum window width (ipixels) for custom cursor activation
 		delay: 150, // shadow move delay (milliseconds)
 		hover: {
-			text: 'p, h1', // tag list for text cursor
-			image: 'img, video', // tag list for image cursor
-			link: 'a, button' // tag list for link cursor
+			text: 'h2, p', // tag list for text cursor
+			image: 'img, video, .gallery', // tag list for image cursor
+			link: 'a, button, #reservation-close, .menu-photo' // tag list for link cursor
 		},
+		hide_for: null,
 		dot: null,
 		shadow: null,
 		catch_stop: null,
@@ -39,6 +40,7 @@
 			cursor.hover.text = document.querySelectorAll(cursor.hover.text);
 			cursor.hover.image = document.querySelectorAll(cursor.hover.image);
 			cursor.hover.link = document.querySelectorAll(cursor.hover.link);
+			cursor.hide_for = document.querySelectorAll('select, input');
 		},
 		toggle: function() {
 			document.documentElement.clientWidth >= cursor.from_ ? cursor.activate() : cursor.deactivate();
@@ -47,6 +49,9 @@
 			cursor.dot.style.display = 'block';
 			cursor.shadow.style.display = 'block';
 			document.body.classList.add('cursor-hide');
+			for (var l = 0; l < cursor.hide_for.length; l++) {
+				cursor.hide_for[l].classList.add('cursor-hide');
+			}
 			window.addEventListener('mousemove', cursor.move);
 			window.addEventListener('mousedown', cursor.down);
 			window.addEventListener('mouseup', cursor.up);
@@ -68,6 +73,9 @@
 			cursor.dot.style.display = 'none';
 			cursor.shadow.style.display = 'none';
 			document.body.classList.remove('cursor-hide');
+			for (var l = 0; l < cursor.hide_for.length; l++) {
+				cursor.hide_for[l].classList.remove('cursor-hide');
+			}
 			window.removeEventListener('mousemove', cursor.move);
 			window.removeEventListener('mousedown', cursor.down);
 			window.removeEventListener('mouseup', cursor.up);
@@ -123,18 +131,8 @@
 		leave_text:  function() { cursor.class_ending.remove('hover-text')  },
 		enter_image: function() { cursor.class_ending.add('hover-image')    },
 		leave_image: function() { cursor.class_ending.remove('hover-image') },
-		enter_link:  function() {
-			var rect = this.getBoundingClientRect();
-			var x = rect.left + ((rect.right - rect.left) / 2);
-			var y = rect.top + ((rect.bottom - rect.top) / 2);
-			cursor.over_link = true;
-			cursor.set(cursor.shadow, x, y);
-			cursor.class_ending.add('hover-link');
-		},
-		leave_link:  function() {
-			cursor.over_link = false;
-			cursor.class_ending.remove('hover-link');
-		},
+		enter_link:  function() { cursor.class_ending.add('hover-link');    },
+		leave_link:  function() { cursor.class_ending.remove('hover-link'); },
 		class_ending: {
 			add: function(c) {
 				cursor.dot.classList.add('cursor-dot-' + c);
