@@ -2,11 +2,11 @@ A custom cursor of two elements (dot and shadow) that changes its appearance whe
 
 ## Demo
 
-[Cursor demonstration](https://rafaylik.github.io/cursor/)
+[Cursor demonstration](https://rafailyk.github.io/cursor/)
 
 ## Installing
 
-- [Download](https://github.com/rafaylik/cursor/archive/master.zip) and unzip, or just `$ git clone https://github.com/rafaylik/cursor.git`
+- [Download](https://github.com/rafailyk/cursor/archive/master.zip) and unzip, or just `$ git clone https://github.com/rafailyk/cursor.git`
 - Place a `cursor.css` and `cursor.js` in the directory of your application.
 - Include `cursor.css` and `cursor.js` at the `head` section.
 ``` html
@@ -53,4 +53,4 @@ hover: {
 
 ## Author and license
 
-**Michael Rafaylik** - [rafaylik](https://github.com/rafaylik) on GitHub. Project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
+**Michael Rafailyk** - [rafailyk](https://github.com/rafailyk) on GitHub. Project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
